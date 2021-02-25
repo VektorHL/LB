@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class AuthorizationWindow : Form
     {
+        //конструктор для окна авторизации
         public AuthorizationWindow()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace WindowsFormsApp1
 
         }
 
-        //надпись "Введите пароль для использования"
+        //надпись "Введите пароль для использования". ХЗ почему оно с пометкой КЛИК создалось
         private void PasswordInput_Label_Click(object sender, EventArgs e)
         {
 
@@ -37,10 +38,10 @@ namespace WindowsFormsApp1
             
         }
 
-        //кнопка "ОК" для отправки пароля на проверку
+        //кнопка "ОК" для отправки пароля на проверку. Действие после клика на неё
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
-
+            //this.PasswordInput_textBox.Text = "вы нажали ОК";
         }
     }
 }
