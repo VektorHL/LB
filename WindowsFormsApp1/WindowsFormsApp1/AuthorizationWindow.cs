@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
         //кнопка "ОК" для отправки пароля на проверку. Действие после клика на неё
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
-            //this.PasswordInput_textBox.Text = "вы нажали ОК";
+            this.PasswordInput_textBox.Text = "вы нажали ОК";
         }
     }
 }
