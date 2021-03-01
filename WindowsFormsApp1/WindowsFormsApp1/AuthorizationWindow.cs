@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
             //this.PasswordInput_textBox.Text = "вы нажали ОК";
         }
 
+
         //по нажатию на поле первый раз после запуска программы, очищает его
         private void PasswordInput_textBox_Enter(object sender, EventArgs e)
         {
