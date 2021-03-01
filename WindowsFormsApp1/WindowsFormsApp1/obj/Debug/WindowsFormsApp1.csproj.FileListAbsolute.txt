@@ -81,3 +81,4 @@ C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bi
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.xml
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainWindow.resources

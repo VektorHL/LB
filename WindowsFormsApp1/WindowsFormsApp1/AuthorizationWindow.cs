@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             
         }
 
+
         //кнопка "ОК" для отправки пароля на проверку. Действие после клика на неё
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
@@ -68,11 +69,19 @@ namespace WindowsFormsApp1
 
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
-
+                
+                
+                //если пароль введён правильно, это окно больше не нужно. поэтому оно закроется и откроет основное
                 if (table.Rows.Count > 0)
                 {
                     MessageBox.Show("HURRAY!");
-                    //тут надо открыть новое окно для использования и закрыть это с авторизацией
+
+                    this.Hide();// убираем окно регистрации
+
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();// открываем основное окно
+
+                    //this.Close();// закрываем окно пароля                    
                 }
                 else
                 {

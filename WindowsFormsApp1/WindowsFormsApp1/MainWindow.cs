@@ -16,5 +16,23 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        //таблица для удобства вёрстки
+        private void MainWindow_tableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //надпись "ДОБАВЛЕНИЕ ПЕРЕМЕЩЕНИЯ"
+        private void MW_tLP_setMoves_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //надпись "СВОДКА О ПЕРЕМЕЩЕНИЯХ"
+        private void MW_tLP_getMoves_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

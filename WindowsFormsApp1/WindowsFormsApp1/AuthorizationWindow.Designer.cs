@@ -79,8 +79,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.PasswordInput_Label);
             this.Controls.Add(this.PasswordInput_textBox);
             this.Controls.Add(this.Password_OK_Botton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthorizationWindow";
-            this.Text = "Авторизация";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LittleBrother. Авторизация";
             this.Load += new System.EventHandler(this.AuthorizationWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
