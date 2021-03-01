@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient; //для работы клиента с сервером
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 
 namespace WindowsFormsApp1
