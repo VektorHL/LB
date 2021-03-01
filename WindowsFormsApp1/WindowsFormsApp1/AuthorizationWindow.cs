@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             }
 
         }
-
+        
         //если поле пустое
         private void PasswordInput_textBox_Leave(object sender, EventArgs e)
         {
