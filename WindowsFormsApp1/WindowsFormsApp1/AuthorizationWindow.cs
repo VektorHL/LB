@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient; //для работы клиента с сервером
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
