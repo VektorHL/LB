@@ -17,6 +17,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+            PasswordInput_textBox.Text = "Введите пароль";
+            PasswordInput_textBox.ForeColor = Color.Gray;
+
             //скрывает символы пароля
             //this.PasswordInput_textBox.UseSystemPasswordChar = true;
         }
@@ -42,6 +45,28 @@ namespace WindowsFormsApp1
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
             //this.PasswordInput_textBox.Text = "вы нажали ОК";
+        }
+
+        //по нажатию на поле первый раз после запуска программы, очищает его
+        private void PasswordInput_textBox_Enter(object sender, EventArgs e)
+        {
+            if(PasswordInput_textBox.Text == "Введите пароль")
+            {
+                PasswordInput_textBox.Text = "";
+                PasswordInput_textBox.ForeColor = Color.Black;
+            }
+
+        }
+
+        //если поле пустое
+        private void PasswordInput_textBox_Leave(object sender, EventArgs e)
+        {
+            if (PasswordInput_textBox.Text == "")
+            {
+                PasswordInput_textBox.Text = "Введите пароль";
+                PasswordInput_textBox.ForeColor = Color.Red;
+            }
+
         }
     }
 }

@@ -54,6 +54,8 @@ namespace WindowsFormsApp1
             this.PasswordInput_textBox.Size = new System.Drawing.Size(200, 26);
             this.PasswordInput_textBox.TabIndex = 7;
             this.PasswordInput_textBox.TextChanged += new System.EventHandler(this.PasswordInput_textBox_TextChanged);
+            this.PasswordInput_textBox.Enter += new System.EventHandler(this.PasswordInput_textBox_Enter);
+            this.PasswordInput_textBox.Leave += new System.EventHandler(this.PasswordInput_textBox_Leave);
             // 
             // Password_OK_Botton
             // 

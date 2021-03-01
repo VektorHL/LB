@@ -49,3 +49,4 @@ C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.xml
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.dll
