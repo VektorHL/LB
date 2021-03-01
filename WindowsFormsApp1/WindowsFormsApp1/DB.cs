@@ -4,15 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 
 namespace WindowsFormsApp1
 {
     class DB
     {
-        
         //переменная с данными о серваке и БД
-        MySqlConnection connection = new MySqlConnection("Server=localhost;Port=5432;Database=LittleBrother;User Id=user;Password=parol");//хз, вроде должно работать. не прверял
+        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=littlebrother");//хз, вроде должно работать. не прверял
 
         //метод для открытия соединения
         public void openConnection()
