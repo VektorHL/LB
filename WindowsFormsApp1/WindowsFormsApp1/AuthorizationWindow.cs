@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient; //для работы клиента с сервером
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +19,16 @@ namespace WindowsFormsApp1
         public AuthorizationWindow()
         {
             InitializeComponent();
+
+            //NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=LittleBrother;User Id=user;Password=123");
+            //conn.Open();
+            //NpgsqlCommand com = new NpgsqlCommand();
+            //com.Connection = conn;
+            //com.CommandType = CommandType.Text;
+            //com.CommandText = "SELECT * FROM \"userPassword\" WHERE 'password' = @pswd";
+            //NpgsqlDataReader dr = com.ExecuteReader();
+
+           
 
             //скрывает символы пароля
             //this.PasswordInput_textBox.UseSystemPasswordChar = true;
@@ -29,7 +42,7 @@ namespace WindowsFormsApp1
         //надпись "Введите пароль для использования". ХЗ почему оно с пометкой КЛИК создалось
         private void PasswordInput_Label_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //поле для ввода пароля
@@ -41,7 +54,51 @@ namespace WindowsFormsApp1
         //кнопка "ОК" для отправки пароля на проверку. Действие после клика на неё
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
-            this.PasswordInput_textBox.Text = "Кнопка ОК работает_";
+            //PasswordInput_textBox.Text = "SELECT * FROM \"userPassword\" WHERE password = '@pswd'";
+            String userPassword = PasswordInput_textBox.Text;
+
+            //DB db = new DB();
+
+            //DataTable table = new DataTable();
+
+            //MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            //MySqlCommand command = new MySqlCommand("SELECT * FROM \"userPassword\" WHERE 'password' = @pswd", db.getConnection());
+
+            //command.Parameters.Add("@pswd", MySqlDbType.VarChar).Value = userPassword;
+
+            //adapter.SelectCommand = command;
+            //adapter.Fill(table);
+
+            //if (table.Rows.Count > 0)
+            //{
+            //    MessageBox.Show("HURRAY!");
+            //    //тут надо открыть новое окно для использования и закрыть это с авторизацией
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Неверный пароль. Попробуйте снова.");
+            //}
+
+            //Npgsql
+            ////NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=LittleBrother;User Id=user;Password=123");
+            ////conn.Open();
+            ////NpgsqlCommand com = new NpgsqlCommand();
+            ////com.Connection = conn;
+            ////com.CommandType = CommandType.Text;
+            ////com.CommandText = "SELECT * FROM \"userPassword\" WHERE password = '" + userPassword + "'";          
+            ////NpgsqlDataReader dr = com.ExecuteReader();
+
+            ////if (dr.HasRows)
+            ////{
+            ////    MessageBox.Show("yes");
+            ////    //DataTable dt = new DataTable();
+            ////    //dt.Load(dr);
+            ////}
+            ////else
+            ////{
+            ////    MessageBox.Show("no");
+            ////}
         }
     }
 }

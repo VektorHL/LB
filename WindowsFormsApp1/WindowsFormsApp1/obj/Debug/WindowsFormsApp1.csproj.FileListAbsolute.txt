@@ -49,3 +49,35 @@ C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.xml
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.Common.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.Tracing.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Globalization.Extensions.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.SecureString.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Overlapped.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Npgsql.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Json.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Npgsql.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Json.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
