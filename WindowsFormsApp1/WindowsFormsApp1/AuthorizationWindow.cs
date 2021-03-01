@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             //MySqlCommand command = new MySqlCommand("SELECT * FROM \"userPassword\" WHERE 'password' = @pswd", db.getConnection());
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `userpasswords` WHERE 'password' = @pswd", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `userpasswords` WHERE `password` = @pswd", db.getConnection());
 
             command.Parameters.Add("@pswd", MySqlDbType.VarChar).Value = userPassword;
 
