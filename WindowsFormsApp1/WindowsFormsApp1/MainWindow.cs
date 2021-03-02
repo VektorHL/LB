@@ -15,7 +15,17 @@ namespace WindowsFormsApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            names_comboBox.Text = "ФИО";
+            names_comboBox.ForeColor = Color.Gray;
+
+            rooms_comboBox.Text = "Помещение";
+            rooms_comboBox.ForeColor = Color.Gray;
+   
         }
+       
+        //protected override bool ScaleChildren => false;
+
 
         //таблица для удобства вёрстки
         private void MainWindow_tableLayoutPanel_Paint(object sender, PaintEventArgs e)
@@ -23,19 +33,12 @@ namespace WindowsFormsApp1
 
         }
 
-        //надпись "ДОБАВЛЕНИЕ ПЕРЕМЕЩЕНИЯ"
-        private void MW_tLP_setMoves_textBox_TextChanged(object sender, EventArgs e)
+        private void moves_label_Click(object sender, EventArgs e)
         {
 
         }
 
-        //надпись "СВОДКА О ПЕРЕМЕЩЕНИЯХ"
-        private void MW_tLP_getMoves_textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void MainWindow_Load(object sender, EventArgs e)
         {
 
         }
