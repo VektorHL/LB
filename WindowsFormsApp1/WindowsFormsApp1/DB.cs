@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
             if (connection.State == System.Data.ConnectionState.Open)
             {
-                connection.Open();
+                connection.Close();
             }
         }
 

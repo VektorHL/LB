@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 01, 2021 at 03:02 AM
+-- Generation Time: Mar 02, 2021 at 02:55 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -39,7 +39,8 @@ CREATE TABLE `userpasswords` (
 
 INSERT INTO `userpasswords` (`id`, `password`) VALUES
 (1, 'Testpassword123'),
-(2, 'Testpassword2');
+(2, 'Testpassword2'),
+(3, '123');
 
 --
 -- Indexes for dumped tables
@@ -59,7 +60,7 @@ ALTER TABLE `userpasswords`
 -- AUTO_INCREMENT for table `userpasswords`
 --
 ALTER TABLE `userpasswords`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

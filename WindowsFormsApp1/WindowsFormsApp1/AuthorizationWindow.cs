@@ -14,12 +14,22 @@ namespace WindowsFormsApp1
 {
     public partial class AuthorizationWindow : Form
     {
+        DB db = new DB();
+
+        DataTable table = new DataTable();
+
+        MySqlDataAdapter adapter = new MySqlDataAdapter();
+
         //конструктор для окна авторизации
         public AuthorizationWindow()
         {
             InitializeComponent();
 
-            PasswordInput_textBox.Text = "Введите пароль";
+            login_textBox.Text = "login";
+            PasswordInput_textBox.Text = "password";
+            
+
+            login_textBox.ForeColor = Color.Gray;
             PasswordInput_textBox.ForeColor = Color.Gray;
 
             //скрывает символы пароля
@@ -48,7 +58,7 @@ namespace WindowsFormsApp1
         private void Password_OK_Botton_Click(object sender, EventArgs e)
         {
             String userPassword = PasswordInput_textBox.Text;
-
+            String userLogin = login_textBox.Text;
             /*
              * ничего не делает, если: 
              *      1)поле после попытки ввода пароля осталось пустым (мигающий курсор в нём, но оно пустое; будет красная надпись)
@@ -56,15 +66,15 @@ namespace WindowsFormsApp1
             */
             if (PasswordInput_textBox.Text != "" && PasswordInput_textBox.Text != "Введите пароль")
             {          
-                DB db = new DB();
+                //DB db = new DB();
 
-                DataTable table = new DataTable();
+                //DataTable table = new DataTable();
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                //MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-                //MySqlCommand command = new MySqlCommand("SELECT * FROM \"userPassword\" WHERE 'password' = @pswd", db.getConnection());
-                MySqlCommand command = new MySqlCommand("SELECT * FROM `userpasswords` WHERE `password` = @pswd", db.getConnection());
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @ln AND `password` = @pswd", db.getConnection());
 
+                command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = userLogin;
                 command.Parameters.Add("@pswd", MySqlDbType.VarChar).Value = userPassword;
 
                 adapter.SelectCommand = command;
@@ -74,18 +84,16 @@ namespace WindowsFormsApp1
                 //если пароль введён правильно, это окно больше не нужно. поэтому оно закроется и откроет основное
                 if (table.Rows.Count > 0)
                 {
-                    MessageBox.Show("HURRAY!");
+                    //MessageBox.Show("HURRAY!");
 
                     this.Hide();// убираем окно регистрации
 
                     MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();// открываем основное окно
-
-                    //this.Close();// закрываем окно пароля                    
+                    mainWindow.Show();// открываем основное окно                  
                 }
                 else
                 {
-                    MessageBox.Show("Неверный пароль. Попробуйте снова.");
+                    MessageBox.Show("Неверный пароль.");
                 }
 
                 //Npgsql
@@ -115,7 +123,7 @@ namespace WindowsFormsApp1
         //по нажатию на поле первый раз после запуска программы, очищает его
         private void PasswordInput_textBox_Enter(object sender, EventArgs e)
         {
-            if(PasswordInput_textBox.Text == "Введите пароль")
+            if(PasswordInput_textBox.Text == "password")
             {
                 PasswordInput_textBox.Text = "";
                 PasswordInput_textBox.ForeColor = Color.Black;
@@ -128,10 +136,34 @@ namespace WindowsFormsApp1
         {
             if (PasswordInput_textBox.Text == "")
             {
-                PasswordInput_textBox.Text = "Введите пароль";
+                PasswordInput_textBox.Text = "password";
                 PasswordInput_textBox.ForeColor = Color.Red;
             }
+        }
 
+
+
+        private void login_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_textBox_Enter(object sender, EventArgs e)
+        {
+            if (login_textBox.Text == "login")
+            {
+                login_textBox.Text = "";
+                login_textBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void login_textBox_Leave(object sender, EventArgs e)
+        {
+            if (login_textBox.Text == "")
+            {
+                login_textBox.Text = "login";
+                login_textBox.ForeColor = Color.Red;
+            }
         }
     }
 }
