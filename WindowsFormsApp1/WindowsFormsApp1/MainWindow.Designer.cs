@@ -164,6 +164,7 @@ namespace WindowsFormsApp1
             this.rooms_comboBox.Size = new System.Drawing.Size(164, 21);
             this.rooms_comboBox.TabIndex = 2;
             this.rooms_comboBox.TabStop = false;
+            this.rooms_comboBox.SelectedIndexChanged += new System.EventHandler(this.rooms_comboBox_SelectedIndexChanged);
             // 
             // fullName_panel
             // 
@@ -182,6 +183,7 @@ namespace WindowsFormsApp1
             this.names_comboBox.Size = new System.Drawing.Size(234, 21);
             this.names_comboBox.TabIndex = 1;
             this.names_comboBox.TabStop = false;
+            this.names_comboBox.SelectedIndexChanged += new System.EventHandler(this.names_comboBox_SelectedIndexChanged);
             // 
             // getMoves_tableLayoutPanel
             // 
@@ -286,7 +288,7 @@ namespace WindowsFormsApp1
             this.getMoves_button.Text = "Получить";
             this.getMoves_button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.getMoves_button.UseVisualStyleBackColor = true;
-            this.getMoves_button.Click += new System.EventHandler(this.getMoves_names_comboBox_SelectedIndexChanged);
+            this.getMoves_button.Click += new System.EventHandler(this.getMoves_button_Click);
             // 
             // MainWindow
             // 

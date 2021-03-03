@@ -21,6 +21,11 @@ namespace WindowsFormsApp1
 
         MySqlDataAdapter adapter = new MySqlDataAdapter();
 
+        //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
+        String[] movesType_comboBox_Collection = new String[] { "Отчёт по сотруднику за день",
+                                                "Отчёт по сотрудникам за день",
+                                                "Отчёт по помещению за день" };
+
         public MainWindow()
         {
             InitializeComponent();
@@ -61,7 +66,12 @@ namespace WindowsFormsApp1
                 getMoves_names_comboBox.Items.Add(dataReader["fullName"].ToString());
             }
 
-            db.closeConnection();//
+            db.closeConnection();
+
+            for (int i = 0; i < movesType_comboBox_Collection.Length; i++)
+            {
+                getMoves_movesType_comboBox.Items[i] = movesType_comboBox_Collection[i];
+            }
         }
 
 
@@ -71,6 +81,7 @@ namespace WindowsFormsApp1
 
         }
 
+        //
         private void moves_label_Click(object sender, EventArgs e)
         {
 
@@ -87,9 +98,31 @@ namespace WindowsFormsApp1
 
         }
 
-        private void getMoves_names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void getMoves_button_Click(object sender, EventArgs e)
         {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand();
 
+            switch (getMoves_movesType_comboBox.Text)
+            {
+                case "Отчёт по сотруднику за день":
+                    cmd = new MySqlCommand("", db.getConnection());
+
+                    
+                    break;
+                case "Отчёт по сотрудникам за день":
+                    
+
+
+                    break;
+                case "Отчёт по помещению за день":
+                    
+
+
+                    break;
+            }
+
+            db.closeConnection();
         }
 
         private void getMoves_rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,6 +130,14 @@ namespace WindowsFormsApp1
             
         }
 
-        
+        private void names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
