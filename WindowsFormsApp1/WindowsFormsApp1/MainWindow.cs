@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
             while (dataReader.Read())//читаем построчно, пока строки есть
             {
-                //добавляем значения из БД в список comboBox - ов
+                //добавляем значения из БД в список comboBox -ов
                 rooms_comboBox.Items.Add(dataReader["room"].ToString());
                 getMoves_rooms_comboBox.Items.Add(dataReader["room"].ToString());
             }
@@ -122,6 +122,8 @@ namespace WindowsFormsApp1
                     break;
             }
 
+            //cmd.ExecuteReader();
+
             db.closeConnection();
         }
 
@@ -138,6 +140,26 @@ namespace WindowsFormsApp1
         private void rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void IN_button_Click(object sender, EventArgs e)
+        {
+            String insert = "INSERT INTO `statistic` (`id`, `member_id`, `room_id`, `dateTime`) VALUES" + "(NULL, ";
+            
+            //подзапросы для главного запроса. получают id выбранного в окне работника и помещения соответственно
+            String memberIdGet = "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "'), ";
+            String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), NOW())";
+
+            
+            db.openConnection();
+            
+            //запрос для вставки
+            MySqlCommand cmd = new MySqlCommand(insert + memberIdGet + roomIdGet, db.getConnection());
+            cmd.ExecuteNonQuery();
+
+            db.closeConnection();
+
+            //MessageBox.Show("Запись добавлена");
         }
     }
 }

@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             this.getMoves_label = new System.Windows.Forms.Label();
             this.moves_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.inOut_panel = new System.Windows.Forms.Panel();
-            this.OUT_button = new System.Windows.Forms.Button();
             this.IN_button = new System.Windows.Forms.Button();
             this.room_panel = new System.Windows.Forms.Panel();
             this.rooms_comboBox = new System.Windows.Forms.ComboBox();
@@ -119,7 +118,6 @@ namespace WindowsFormsApp1
             // 
             // inOut_panel
             // 
-            this.inOut_panel.Controls.Add(this.OUT_button);
             this.inOut_panel.Controls.Add(this.IN_button);
             this.inOut_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inOut_panel.Location = new System.Drawing.Point(3, 156);
@@ -127,25 +125,16 @@ namespace WindowsFormsApp1
             this.inOut_panel.Size = new System.Drawing.Size(294, 123);
             this.inOut_panel.TabIndex = 2;
             // 
-            // OUT_button
-            // 
-            this.OUT_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OUT_button.Location = new System.Drawing.Point(189, 12);
-            this.OUT_button.Name = "OUT_button";
-            this.OUT_button.Size = new System.Drawing.Size(70, 25);
-            this.OUT_button.TabIndex = 1;
-            this.OUT_button.Text = "OUT";
-            this.OUT_button.UseVisualStyleBackColor = true;
-            // 
             // IN_button
             // 
             this.IN_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IN_button.Location = new System.Drawing.Point(50, 12);
+            this.IN_button.Location = new System.Drawing.Point(103, 16);
             this.IN_button.Name = "IN_button";
-            this.IN_button.Size = new System.Drawing.Size(70, 25);
+            this.IN_button.Size = new System.Drawing.Size(75, 30);
             this.IN_button.TabIndex = 0;
-            this.IN_button.Text = "IN";
+            this.IN_button.Text = "Добавить";
             this.IN_button.UseVisualStyleBackColor = true;
+            this.IN_button.Click += new System.EventHandler(this.IN_button_Click);
             // 
             // room_panel
             // 
@@ -324,7 +313,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label getMoves_label;
         private System.Windows.Forms.Panel room_panel;
         private System.Windows.Forms.Panel inOut_panel;
-        private System.Windows.Forms.Button OUT_button;
         private System.Windows.Forms.Button IN_button;
         private System.Windows.Forms.Label moves_label;
         private System.Windows.Forms.ComboBox rooms_comboBox;
