@@ -22,9 +22,9 @@ namespace WindowsFormsApp1
         MySqlDataAdapter adapter = new MySqlDataAdapter();
 
         //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
-        String[] movesType_comboBox_Collection = new String[] { "Отчёт по сотруднику за день",
-                                                "Отчёт по сотрудникам за день",
-                                                "Отчёт по помещению за день" };
+        String[] movesType_comboBox_Collection = new String[] { "Маршрут сотрудника",
+                                                "Отчёт по пребыванию в зоне сотрудника",
+                                                "Переработка" };
 
         public MainWindow()
         {
@@ -100,31 +100,34 @@ namespace WindowsFormsApp1
 
         private void getMoves_button_Click(object sender, EventArgs e)
         {
-            db.openConnection();
-            MySqlCommand cmd = new MySqlCommand();
+            //db.openConnection();
+            //MySqlCommand cmd = new MySqlCommand();
 
             switch (getMoves_movesType_comboBox.Text)
             {
-                case "Отчёт по сотруднику за день":
-                    cmd = new MySqlCommand("", db.getConnection());
+                case "Маршрут сотрудника":
+                    //cmd = new MySqlCommand("", db.getConnection());
 
-                    
-                    break;
-                case "Отчёт по сотрудникам за день":
-                    
-
+                    MemberWayWindow memWayWindow = new MemberWayWindow();
+                    memWayWindow.Show();
 
                     break;
-                case "Отчёт по помещению за день":
-                    
+                case "Отчёт по пребыванию в зоне сотрудника":
 
+                    RoomStatWindow roomStatWindow = new RoomStatWindow();
+                    roomStatWindow.Show();
+
+                    break;
+                case "Переработка":
+
+                    OvertimeWindow overtimeWindow = new OvertimeWindow();
+                    overtimeWindow.Show();
 
                     break;
             }
-
             //cmd.ExecuteReader();
 
-            db.closeConnection();
+            //db.closeConnection();
         }
 
         private void getMoves_rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +138,20 @@ namespace WindowsFormsApp1
         private void names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            //MySqlCommand cmd = new MySqlCommand("SELECT `room` FROM `rooms` WHERE `room` >< '[ВНЕ РАБОЧЕЙ ЗОНЫ]'", db.getConnection());
+
+            //db.openConnection();//открываем соединение, чтобы контачить с БД
+
+            //DbDataReader dataReader = cmd.ExecuteReader();//создаём ридер, чтоб он читал поток строк от команды 
+
+            //rooms_comboBox.Items.Clear();
+
+            //while (dataReader.Read())//читаем построчно, пока строки есть
+            //{
+            //    rooms_comboBox.Items.Add(dataReader["room"].ToString());
+            //}
+
+            //db.closeConnection();//закрываем соединение
         }
 
         private void rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,17 +161,19 @@ namespace WindowsFormsApp1
 
         private void IN_button_Click(object sender, EventArgs e)
         {
-            String insert = "INSERT INTO `statistic` (`id`, `member_id`, `room_id`, `dateTime`) VALUES" + "(NULL, ";
+            String update = "UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = " +
+                                "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "') ORDER BY `id` DESC LIMIT 1; ";
+            String insert = "INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) VALUES" + "(NULL, ";
             
             //подзапросы для главного запроса. получают id выбранного в окне работника и помещения соответственно
             String memberIdGet = "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "'), ";
-            String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), NOW())";
+            String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), CURRENT_TIME(), NULL)";
 
             
             db.openConnection();
             
-            //запрос для вставки
-            MySqlCommand cmd = new MySqlCommand(insert + memberIdGet + roomIdGet, db.getConnection());
+            //запрос для вставки нового передвижения
+            MySqlCommand cmd = new MySqlCommand(update + insert + memberIdGet + roomIdGet, db.getConnection());
             cmd.ExecuteNonQuery();
 
             db.closeConnection();
