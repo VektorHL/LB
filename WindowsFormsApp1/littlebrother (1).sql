@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 09, 2021 at 10:19 PM
+-- Generation Time: Mar 10, 2021 at 10:33 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -86,7 +86,10 @@ INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) V
 (1, 1, 2, '2021-03-09', '21:20:40', '21:36:03'),
 (2, 1, 1, '2021-03-09', '21:36:03', '21:43:18'),
 (3, 1, 2, '2021-03-09', '21:43:18', '21:48:42'),
-(4, 1, 1, '2021-03-09', '21:48:42', NULL);
+(4, 1, 1, '2021-03-09', '21:48:42', '13:18:17'),
+(5, 1, 2, '2021-03-10', '13:26:00', '13:27:20'),
+(6, 1, 2, '2021-03-10', '13:27:21', '13:32:45'),
+(7, 1, 3, '2021-03-10', '13:32:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -212,7 +215,7 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `st`
 --
 ALTER TABLE `st`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `statistic`
