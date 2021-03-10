@@ -164,6 +164,7 @@ namespace WindowsFormsApp1
         {
             String update = "UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = " +
                                 "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "') ORDER BY `id` DESC LIMIT 1; ";
+
             String insert = "INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) VALUES" + "(NULL, ";
             
             //подзапросы для главного запроса. получают id выбранного в окне работника и помещения соответственно

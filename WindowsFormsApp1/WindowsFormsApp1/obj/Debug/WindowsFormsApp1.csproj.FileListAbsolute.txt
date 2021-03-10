@@ -116,3 +116,5 @@ C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MemberWayWindow.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OvertimeWindow.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RoomStatWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OvertimeWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RoomStatWindow.resources
