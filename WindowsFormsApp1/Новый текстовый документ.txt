@@ -1,0 +1,27 @@
+SELECT `date`, (SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS fullName FROM `st` WHERE fullName = '" + memberName + "', " +
+                "`room_id`, `time_in`, `time_out`, ABS(`time_out` - `time_in`) AS duration FROM `st` WHERE `time_out` IS NOT NULL AND `date` = CURRENT_DATE()
+
+запрос для получения маршрута выбранного сотрудника
+SELECT `date`, 
+	CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, 
+    `room`, 
+    `time_in`, `time_out`, 
+    ABS(`time_out` - `time_in`) AS duration 
+FROM `st`, `members`, `rooms`
+	WHERE `time_out` IS NOT NULL 
+    AND `date` = CURRENT_DATE()
+    AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович'
+    AND room_id = rooms.id
+
+
+
+UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = (SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович') ORDER BY `id` DESC LIMIT 1;
+
+INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) 
+VALUES (NULL, 
+        (SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович'), 
+        (SELECT id FROM `rooms` WHERE `room` = '[ВНЕ РАБОЧЕЙ ЗОНЫ]'),
+        CURRENT_DATE(), 
+        CURRENT_TIME(), 
+        NULL);
+

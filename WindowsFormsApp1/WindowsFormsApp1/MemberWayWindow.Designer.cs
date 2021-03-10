@@ -30,43 +30,55 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.moves_label = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.time_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.time_out = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moves_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.moves_label);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(684, 411);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // moves_label
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.moves_label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.moves_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.moves_label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.moves_label.Location = new System.Drawing.Point(0, 0);
+            this.moves_label.Name = "moves_label";
+            this.moves_label.Size = new System.Drawing.Size(684, 43);
+            this.moves_label.TabIndex = 4;
+            this.moves_label.Text = "МАРШРУТ СОТРУДНИКА";
+            this.moves_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.date,
             this.fullName,
             this.room,
             this.time_in,
             this.time_out,
             this.duration});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(684, 368);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView.Location = new System.Drawing.Point(0, 43);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(684, 368);
+            this.dataGridView.TabIndex = 1;
             // 
             // date
             // 
@@ -98,29 +110,17 @@ namespace WindowsFormsApp1
             this.duration.HeaderText = "Длительность";
             this.duration.Name = "duration";
             // 
-            // moves_label
-            // 
-            this.moves_label.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.moves_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.moves_label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.moves_label.Location = new System.Drawing.Point(0, 0);
-            this.moves_label.Name = "moves_label";
-            this.moves_label.Size = new System.Drawing.Size(684, 43);
-            this.moves_label.TabIndex = 4;
-            this.moves_label.Text = "МАРШРУТ СОТРУДНИКА";
-            this.moves_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // member_way
+            // MemberWayWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(684, 411);
             this.Controls.Add(this.panel1);
-            this.Name = "member_way";
+            this.Name = "MemberWayWindow";
             this.Text = "member_way";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn room;

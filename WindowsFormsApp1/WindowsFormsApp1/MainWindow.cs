@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
         String[] movesType_comboBox_Collection = new String[] { "Маршрут сотрудника",
-                                                "Отчёт по пребыванию в зоне сотрудника",
+                                                "Пребывание сотрудника в зонах",
                                                 "Переработка" };
 
         public MainWindow()
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             db.closeConnection();//закрываем соединение
             db.openConnection();//открываем новое для нового запроса
 
-            cmd = new MySqlCommand("SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) as fullName FROM `members`", db.getConnection());
+            cmd = new MySqlCommand("SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS fullName FROM `members`", db.getConnection());
             dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
                 getMoves_names_comboBox.Items.Add(dataReader["fullName"].ToString());
             }
 
+            dataReader.Close();
             db.closeConnection();
 
             for (int i = 0; i < movesType_comboBox_Collection.Length; i++)
@@ -108,11 +109,11 @@ namespace WindowsFormsApp1
                 case "Маршрут сотрудника":
                     //cmd = new MySqlCommand("", db.getConnection());
 
-                    MemberWayWindow memWayWindow = new MemberWayWindow();
+                    MemberWayWindow memWayWindow = new MemberWayWindow(names_comboBox.Text, rooms_comboBox.Text);
                     memWayWindow.Show();
 
                     break;
-                case "Отчёт по пребыванию в зоне сотрудника":
+                case "Пребывание сотрудника в зонах":
 
                     RoomStatWindow roomStatWindow = new RoomStatWindow();
                     roomStatWindow.Show();
@@ -167,14 +168,22 @@ namespace WindowsFormsApp1
             
             //подзапросы для главного запроса. получают id выбранного в окне работника и помещения соответственно
             String memberIdGet = "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "'), ";
-            String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), CURRENT_TIME(), NULL)";
+            String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), CURRENT_DATE(), CURRENT_TIME(), NULL)";
 
             
             db.openConnection();
-            
-            //запрос для вставки нового передвижения
-            MySqlCommand cmd = new MySqlCommand(update + insert + memberIdGet + roomIdGet, db.getConnection());
-            cmd.ExecuteNonQuery();
+
+            try
+            {
+                //запрос для вставки нового передвижения
+                MySqlCommand cmd = new MySqlCommand(update + insert + memberIdGet + roomIdGet, db.getConnection());
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка! Запись не будет добавлена!");
+            }
+            finally { }
 
             db.closeConnection();
 

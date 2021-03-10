@@ -26,7 +26,6 @@ C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bi
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AuthorizationWindow.resources
-C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -114,3 +113,6 @@ C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainWindow.resources
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MemberWayWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MemberWayWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OvertimeWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RoomStatWindow.resources
