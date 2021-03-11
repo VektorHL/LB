@@ -38,11 +38,11 @@ namespace WindowsFormsApp1
             MySqlConnection mySqlConnection = new MySqlConnection(connection);
             mySqlConnection.Open();
 
-            string query = "SELECT `date`, " +
-                "CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, " +
-                "`room`, " +
-                "`time_in`, `time_out`, " +
-                "ABS(`time_out` - `time_in`) AS duration " +
+            string query = "SELECT DATE_FORMAT(`date`, '%d.%m.%Y') AS date, " +
+                    "CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, " +
+                    "`room`, " +
+                    "`time_in`, `time_out`, " +
+                    "TIMEDIFF(`time_out`, `time_in`) AS duration " +
                 "FROM `st`, `members`, `rooms` " +
                 "WHERE `time_out` IS NOT NULL " +
                 "AND `date` = CURRENT_DATE() - 1 " +

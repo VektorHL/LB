@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
         String[] movesType_comboBox_Collection = new String[] { "Маршрут сотрудника",
-                                                "Пребывание сотрудника в зонах",
+                                                "Пребывание сотрудника в зонах за текущий месяц",
                                                 "Переработка" };
 
         public MainWindow()
@@ -96,7 +96,24 @@ namespace WindowsFormsApp1
 
         private void getMoves_movesType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (getMoves_movesType_comboBox.Text)
+            {
+                case "Маршрут сотрудника":
 
+                    getMoves_names_comboBox.Text = "Выберите ФИО сотрудника";
+
+                    break;
+                case "Пребывание сотрудника в зонах за текущий месяц":
+
+                    getMoves_names_comboBox.Text = "ФИО сотрудника";
+
+                    break;
+                case "Переработка":
+
+                    getMoves_names_comboBox.Text = "Выберите ФИО";
+
+                    break;
+            }
         }
 
         private void getMoves_button_Click(object sender, EventArgs e)
@@ -107,19 +124,14 @@ namespace WindowsFormsApp1
             switch (getMoves_movesType_comboBox.Text)
             {
                 case "Маршрут сотрудника":
-                    //cmd = new MySqlCommand("", db.getConnection());
-                    //string member = getMoves_names_comboBox.Text;
-                    //string room = getMoves_rooms_comboBox.Text;
-
-                    //MessageBox.Show(member);
 
                     MemberWayWindow memWayWindow = new MemberWayWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
                     memWayWindow.Show();
 
                     break;
-                case "Пребывание сотрудника в зонах":
+                case "Пребывание сотрудника в зонах за текущий месяц":
 
-                    RoomStatWindow roomStatWindow = new RoomStatWindow();
+                    RoomStatWindow roomStatWindow = new RoomStatWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
                     roomStatWindow.Show();
 
                     break;
