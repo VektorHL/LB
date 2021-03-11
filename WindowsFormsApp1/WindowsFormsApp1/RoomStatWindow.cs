@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class RoomStatWindow : Form
     {
-        DB db = new DB();
+        //DB db = new DB();
 
         string _memberName;
         string _room;
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             LoadDataTaining();
             
-            this.Text = _memberName + ". Пребывание в зонах за текузий месяц";
+            this.Text = _memberName;
         }
 
         private void LoadDataTaining()

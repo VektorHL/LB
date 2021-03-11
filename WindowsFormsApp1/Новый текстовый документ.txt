@@ -199,3 +199,25 @@ SELECT `room`, SEC_TO_TIME(SUM(duration_inSEC)) AS duration FROM
         AND WEEK(st.date) = WEEK(CURRENT_DATE())) as secc
 GROUP BY secc.room
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+######################################################################################################### для переработки
+SELECT (SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) FROM `members` 
+        	WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович') AS fullName, 
+        28800 AS plan, 
+        SUM(duration_inSEC) AS fact,
+        (SUM(duration_inSEC) - 28800) AS overtime_inSEC FROM 
+        (SELECT (SELECT `room` FROM `rooms` WHERE rooms.id = st.room_id ) AS room, 
+         	CASE WHEN `time_in` < `time_out` THEN 
+         		TIMESTAMPDIFF(second, `time_in`, `time_out`) 
+         	ELSE 
+         		86400 + TIMESTAMPDIFF(second, `time_in`, `time_out`) END AS duration_inSEC
+         FROM `st` 
+         INNER JOIN `members` AS m 
+         WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович' 
+         AND st.member_id = m.id
+         AND st.room_id <> 2
+         AND `time_out` IS NOT NULL
+         AND WEEK(st.date) = WEEK(CURRENT_DATE())) as secc
+GROUP BY `fullName`
+##########################################################################################################

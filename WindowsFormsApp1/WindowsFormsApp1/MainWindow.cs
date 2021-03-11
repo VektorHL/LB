@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
                     break;
                 case "Переработка":
 
-                    OvertimeWindow overtimeWindow = new OvertimeWindow();
+                    OvertimeWindow overtimeWindow = new OvertimeWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
                     overtimeWindow.Show();
 
                     break;
