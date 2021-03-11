@@ -15,42 +15,43 @@ namespace WindowsFormsApp1
     {
         DB db = new DB();
 
-        string _member;
+        string _memberName;
         string _room;
 
         //DataTable table = new DataTable();
 
-        public MemberWayWindow(string memberName, string roomName)
+        public MemberWayWindow(string member, string room)
         {
+            _memberName = member;
+            _room = room;
+            
             InitializeComponent();
-            //string member;
-            //string room;
-
-            _member = memberName;
-            _room = roomName;
-
             LoadDataTaining();
-
         }
 
         private void LoadDataTaining()
         {
             //throw new NotImplementedException();
 
+            string connection = "server=localhost; port=3306; username=root; password=root; database=littlebrother";
+
+            MySqlConnection mySqlConnection = new MySqlConnection(connection);
+            mySqlConnection.Open();
+
             string query = "SELECT `date`, " +
                 "CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, " +
                 "`room`, " +
                 "`time_in`, `time_out`, " +
                 "ABS(`time_out` - `time_in`) AS duration " +
-                "FROM `st`, `members`, `rooms`" +
+                "FROM `st`, `members`, `rooms` " +
                 "WHERE `time_out` IS NOT NULL " +
-                "AND `date` = CURRENT_DATE() " +
-                "AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _member + "' " +
+                "AND `date` = CURRENT_DATE() - 1 " +
+                "AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
                 "AND room_id = rooms.id";
 
-            MySqlCommand cmd = new MySqlCommand(query, db.getConnection());
+            MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
 
-            db.openConnection();
+            //db.openConnection();
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -69,8 +70,9 @@ namespace WindowsFormsApp1
             }
 
             reader.Close();
-            db.closeConnection();
+            mySqlConnection.Close();
 
+            dataGridView.Rows.Clear();
             foreach (string[] row in data)
             {
                 dataGridView.Rows.Add(row);

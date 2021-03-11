@@ -108,8 +108,12 @@ namespace WindowsFormsApp1
             {
                 case "Маршрут сотрудника":
                     //cmd = new MySqlCommand("", db.getConnection());
+                    //string member = getMoves_names_comboBox.Text;
+                    //string room = getMoves_rooms_comboBox.Text;
 
-                    MemberWayWindow memWayWindow = new MemberWayWindow(names_comboBox.Text, rooms_comboBox.Text);
+                    //MessageBox.Show(member);
+
+                    MemberWayWindow memWayWindow = new MemberWayWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
                     memWayWindow.Show();
 
                     break;

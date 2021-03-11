@@ -14,6 +14,18 @@ FROM `st`, `members`, `rooms`
     AND room_id = rooms.id
 
 
+SELECT `date`, 
+	CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, 
+    `room`, 
+    `time_in`, `time_out`, 
+    ABS(`time_out` - `time_in`) AS duration 
+FROM `st`, `members`, `rooms`
+WHERE `time_out` IS NOT NULL 
+AND `date` = CURRENT_DATE() - 1
+AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович' 
+AND room_id = rooms.id
+
+
 
 UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = (SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = 'Вася Пупкин Иванович') ORDER BY `id` DESC LIMIT 1;
 
