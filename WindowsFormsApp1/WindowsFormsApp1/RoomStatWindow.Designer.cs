@@ -32,11 +32,7 @@ namespace WindowsFormsApp1
             this.panel1 = new System.Windows.Forms.Panel();
             this.moves_label = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time_out = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -49,7 +45,7 @@ namespace WindowsFormsApp1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 411);
+            this.panel1.Size = new System.Drawing.Size(334, 311);
             this.panel1.TabIndex = 0;
             // 
             // moves_label
@@ -59,7 +55,7 @@ namespace WindowsFormsApp1
             this.moves_label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.moves_label.Location = new System.Drawing.Point(0, 0);
             this.moves_label.Name = "moves_label";
-            this.moves_label.Size = new System.Drawing.Size(734, 43);
+            this.moves_label.Size = new System.Drawing.Size(334, 43);
             this.moves_label.TabIndex = 5;
             this.moves_label.Text = "ПРЕБЫВАНИЕ СОТРУДНИКА В ЗОНАХ";
             this.moves_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,53 +64,33 @@ namespace WindowsFormsApp1
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.date,
-            this.fullName,
             this.room,
-            this.time_in,
-            this.time_out,
             this.duration});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView.Location = new System.Drawing.Point(0, 43);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(734, 368);
+            this.dataGridView.Size = new System.Drawing.Size(334, 268);
             this.dataGridView.TabIndex = 2;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Дата";
-            this.date.Name = "date";
-            // 
-            // fullName
-            // 
-            this.fullName.HeaderText = "ФИО";
-            this.fullName.Name = "fullName";
             // 
             // room
             // 
             this.room.HeaderText = "Зона";
+            this.room.MinimumWidth = 40;
             this.room.Name = "room";
-            // 
-            // time_in
-            // 
-            this.time_in.HeaderText = "Время входа";
-            this.time_in.Name = "time_in";
-            // 
-            // time_out
-            // 
-            this.time_out.HeaderText = "Время выхода";
-            this.time_out.Name = "time_out";
+            this.room.Width = 180;
             // 
             // duration
             // 
-            this.duration.HeaderText = "Длительность";
+            this.duration.HeaderText = "Общая длительность";
+            this.duration.MinimumWidth = 50;
             this.duration.Name = "duration";
+            this.duration.Width = 110;
             // 
             // RoomStatWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 411);
+            this.ClientSize = new System.Drawing.Size(334, 311);
             this.Controls.Add(this.panel1);
             this.Name = "RoomStatWindow";
             this.Text = "room_stat";
@@ -128,12 +104,8 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn room;
-        private System.Windows.Forms.DataGridViewTextBoxColumn time_in;
-        private System.Windows.Forms.DataGridViewTextBoxColumn time_out;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duration;
         private System.Windows.Forms.Label moves_label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duration;
     }
 }

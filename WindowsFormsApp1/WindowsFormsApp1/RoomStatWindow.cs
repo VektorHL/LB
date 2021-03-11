@@ -36,16 +36,19 @@ namespace WindowsFormsApp1
             MySqlConnection mySqlConnection = new MySqlConnection(connection);
             mySqlConnection.Open();
 
-            string query = "SELECT DATE_FORMAT(`date`, '%d.%m.%Y') AS date, " +
-                    "CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, " +
-                    "`room`, " +
-                    "`time_in`, `time_out`, " +
-                    "TIMEDIFF(`time_out`, `time_in`) AS duration " +
-                "FROM `st`, `members`, `rooms` " +
-                "WHERE `time_out` IS NOT NULL " +
-                "AND `date` = CURRENT_DATE() - 1 " +
-                "AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
-                "AND room_id = rooms.id";
+            string query = "SELECT `room`, SEC_TO_TIME(SUM(duration_inSEC)) AS duration FROM " +
+                                "(SELECT (SELECT `room` FROM `rooms` WHERE rooms.id = st.room_id) AS room, " +
+                                        "CASE WHEN `time_in` < `time_out` THEN " +
+                                            "TIMESTAMPDIFF(second, `time_in`, `time_out`) " +
+                                        "ELSE " +
+                                            "86400 + TIMESTAMPDIFF(second, `time_in`, `time_out`) END AS duration_inSEC " +
+                                "FROM `st`" +
+                                "INNER JOIN `members` AS m " +
+                                "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
+                                "AND st.member_id = m.id " +
+                                "AND `time_out` IS NOT NULL " +
+                                "AND WEEK(st.date) = WEEK(CURRENT_DATE())) as secc " +
+                            "GROUP BY secc.room";
 
             MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
 
@@ -55,14 +58,14 @@ namespace WindowsFormsApp1
 
             while (reader.Read())
             {
-                data.Add(new string[6]);
+                data.Add(new string[2]);
 
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
-                data[data.Count - 1][2] = reader[2].ToString();
-                data[data.Count - 1][3] = reader[3].ToString();
-                data[data.Count - 1][4] = reader[4].ToString();
-                data[data.Count - 1][5] = reader[5].ToString();
+                //data[data.Count - 1][2] = reader[2].ToString();
+                //data[data.Count - 1][3] = reader[3].ToString();
+                //data[data.Count - 1][4] = reader[4].ToString();
+                //data[data.Count - 1][5] = reader[5].ToString();
             }
 
             reader.Close();

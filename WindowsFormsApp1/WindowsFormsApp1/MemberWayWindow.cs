@@ -39,15 +39,17 @@ namespace WindowsFormsApp1
             mySqlConnection.Open();
 
             string query = "SELECT DATE_FORMAT(`date`, '%d.%m.%Y') AS date, " +
-                    "CONCAT(`fName`, ' ', `sName`, ' ', `tName`) AS name, " +
-                    "`room`, " +
-                    "`time_in`, `time_out`, " +
-                    "TIMEDIFF(`time_out`, `time_in`) AS duration " +
-                "FROM `st`, `members`, `rooms` " +
-                "WHERE `time_out` IS NOT NULL " +
-                "AND `date` = CURRENT_DATE() - 1 " +
-                "AND CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
-                "AND room_id = rooms.id";
+                                "(SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) FROM `members` " +
+                                    "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "') AS name, " +
+                                "(SELECT `room` FROM `rooms` WHERE rooms.id = st.room_id) AS room, " +
+                                "`time_in`, `time_out`, " +
+                                "TIMEDIFF(`time_out`, `time_in`) AS duration " +
+                            "FROM `st` " +
+                            "INNER JOIN `members` AS m " +
+                            "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
+                            "AND st.member_id = m.id " +
+                            "AND `time_out` IS NOT NULL " +
+                            "#AND st.date = CURRENT_DATE() - 1";
 
             MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
 
