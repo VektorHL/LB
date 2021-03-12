@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             this.PasswordInput_Label = new System.Windows.Forms.Label();
             this.PasswordInput_textBox = new System.Windows.Forms.TextBox();
             this.Password_OK_Botton = new System.Windows.Forms.Button();
+            this.login_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PasswordInput_Label
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1
             // PasswordInput_textBox
             // 
             this.PasswordInput_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordInput_textBox.Location = new System.Drawing.Point(12, 34);
+            this.PasswordInput_textBox.Location = new System.Drawing.Point(12, 75);
             this.PasswordInput_textBox.Name = "PasswordInput_textBox";
             this.PasswordInput_textBox.Size = new System.Drawing.Size(200, 26);
             this.PasswordInput_textBox.TabIndex = 7;
@@ -63,7 +64,7 @@ namespace WindowsFormsApp1
             this.Password_OK_Botton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Password_OK_Botton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.Password_OK_Botton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Password_OK_Botton.Location = new System.Drawing.Point(218, 34);
+            this.Password_OK_Botton.Location = new System.Drawing.Point(222, 55);
             this.Password_OK_Botton.Name = "Password_OK_Botton";
             this.Password_OK_Botton.Size = new System.Drawing.Size(50, 26);
             this.Password_OK_Botton.TabIndex = 6;
@@ -71,16 +72,30 @@ namespace WindowsFormsApp1
             this.Password_OK_Botton.UseVisualStyleBackColor = true;
             this.Password_OK_Botton.Click += new System.EventHandler(this.Password_OK_Botton_Click);
             // 
+            // login_textBox
+            // 
+            this.login_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.login_textBox.Location = new System.Drawing.Point(12, 34);
+            this.login_textBox.Name = "login_textBox";
+            this.login_textBox.Size = new System.Drawing.Size(200, 26);
+            this.login_textBox.TabIndex = 9;
+            this.login_textBox.TextChanged += new System.EventHandler(this.login_textBox_TextChanged);
+            this.login_textBox.Enter += new System.EventHandler(this.login_textBox_Enter);
+            this.login_textBox.Leave += new System.EventHandler(this.login_textBox_Leave);
+            // 
             // AuthorizationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 77);
+            this.ClientSize = new System.Drawing.Size(284, 127);
+            this.Controls.Add(this.login_textBox);
             this.Controls.Add(this.PasswordInput_Label);
             this.Controls.Add(this.PasswordInput_textBox);
             this.Controls.Add(this.Password_OK_Botton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthorizationWindow";
-            this.Text = "Авторизация";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LittleBrother. Авторизация";
             this.Load += new System.EventHandler(this.AuthorizationWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,5 +107,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label PasswordInput_Label;
         private System.Windows.Forms.TextBox PasswordInput_textBox;
         private System.Windows.Forms.Button Password_OK_Botton;
+        private System.Windows.Forms.TextBox login_textBox;
     }
 }

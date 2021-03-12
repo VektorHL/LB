@@ -3,7 +3,6 @@ C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AuthorizationWindow.resources
-C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -27,7 +26,6 @@ C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bi
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AuthorizationWindow.resources
-C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -81,3 +79,42 @@ C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bi
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.xml
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.Common.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Globalization.Extensions.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.SecureString.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Overlapped.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Npgsql.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Json.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Npgsql.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Json.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Channels.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MemberWayWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MemberWayWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OvertimeWindow.resources
+C:\MyPrograms\GitHub Projects\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RoomStatWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OvertimeWindow.resources
+C:\Programs for Work\GitHub\LittleBrother\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RoomStatWindow.resources
