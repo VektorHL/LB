@@ -36,9 +36,9 @@ namespace WindowsFormsApp1
 
             string query = "SELECT (SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) FROM `members` " +
                                         "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "') AS fullName, " +
-                                    "28800 AS plan, " +
-                                    "SUM(duration_inSEC) AS fact, " +
-                                    "(SUM(duration_inSEC) - 28800) AS overtime_inSEC FROM " +
+                                    "28800/3600 AS plan, " +
+                                    "SUM(duration_inSEC)/3600 AS fact, " +
+                                    "(SUM(duration_inSEC) - 28800)/3600 AS overtime_inSEC FROM " +
                                 "(SELECT (SELECT `room` FROM `rooms` WHERE rooms.id = st.room_id) AS room, " +
                                         "CASE WHEN `time_in` < `time_out` THEN " +
                                             "TIMESTAMPDIFF(second, `time_in`, `time_out`) " +

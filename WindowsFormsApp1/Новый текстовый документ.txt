@@ -218,6 +218,6 @@ SELECT (SELECT CONCAT(`fName`, ' ', `sName`, ' ', `tName`) FROM `members`
          AND st.member_id = m.id
          AND st.room_id <> 2
          AND `time_out` IS NOT NULL
-         AND WEEK(st.date) = WEEK(CURRENT_DATE())) as secc
+         AND WEEK(st.date) = WEEK(CURRENT_DATE()) ) as secc
 GROUP BY `fullName`
 ##########################################################################################################
