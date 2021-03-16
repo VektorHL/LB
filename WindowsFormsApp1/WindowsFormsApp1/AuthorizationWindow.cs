@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             PasswordInput_textBox.ForeColor = Color.Gray;
 
             //скрывает символы пароля
-            //this.PasswordInput_textBox.UseSystemPasswordChar = true;
+            this.PasswordInput_textBox.UseSystemPasswordChar = true;
         }
 
         private void AuthorizationWindow_Load(object sender, EventArgs e)

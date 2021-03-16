@@ -42,9 +42,9 @@ namespace WindowsFormsApp1
             this.PasswordInput_Label.Location = new System.Drawing.Point(10, 9);
             this.PasswordInput_Label.Margin = new System.Windows.Forms.Padding(0);
             this.PasswordInput_Label.Name = "PasswordInput_Label";
-            this.PasswordInput_Label.Size = new System.Drawing.Size(249, 19);
+            this.PasswordInput_Label.Size = new System.Drawing.Size(306, 19);
             this.PasswordInput_Label.TabIndex = 8;
-            this.PasswordInput_Label.Text = "Введите пароль для использования";
+            this.PasswordInput_Label.Text = "Введите логин и пароль для использования";
             this.PasswordInput_Label.Click += new System.EventHandler(this.PasswordInput_Label_Click);
             // 
             // PasswordInput_textBox
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             this.Password_OK_Botton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Password_OK_Botton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.Password_OK_Botton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Password_OK_Botton.Location = new System.Drawing.Point(222, 55);
+            this.Password_OK_Botton.Location = new System.Drawing.Point(247, 55);
             this.Password_OK_Botton.Name = "Password_OK_Botton";
             this.Password_OK_Botton.Size = new System.Drawing.Size(50, 26);
             this.Password_OK_Botton.TabIndex = 6;
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 127);
+            this.ClientSize = new System.Drawing.Size(324, 127);
             this.Controls.Add(this.login_textBox);
             this.Controls.Add(this.PasswordInput_Label);
             this.Controls.Add(this.PasswordInput_textBox);

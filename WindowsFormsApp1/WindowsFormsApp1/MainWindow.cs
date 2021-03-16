@@ -1,14 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -37,7 +30,7 @@ namespace WindowsFormsApp1
             //names_comboBox.ForeColor = Color.Gray;
 
             rooms_comboBox.Text = "Помещение";
-            getMoves_rooms_comboBox.Text = "Помещение";
+            //getMoves_rooms_comboBox.Text = "Помещение";
             //rooms_comboBox.ForeColor = Color.Gray;
 
             //команда для получения списка помещений
@@ -51,7 +44,7 @@ namespace WindowsFormsApp1
             {
                 //добавляем значения из БД в список comboBox -ов
                 rooms_comboBox.Items.Add(dataReader["room"].ToString());
-                getMoves_rooms_comboBox.Items.Add(dataReader["room"].ToString());
+                //getMoves_rooms_comboBox.Items.Add(dataReader["room"].ToString());
             }
 
             db.closeConnection();//закрываем соединение
@@ -62,7 +55,7 @@ namespace WindowsFormsApp1
 
             while (dataReader.Read())
             {
-                names_comboBox.Items.Add(dataReader["fullName"].ToString()) ;
+                names_comboBox.Items.Add(dataReader["fullName"].ToString());
                 getMoves_names_comboBox.Items.Add(dataReader["fullName"].ToString());
             }
 
@@ -125,19 +118,19 @@ namespace WindowsFormsApp1
             {
                 case "Маршрут сотрудника":
 
-                    MemberWayWindow memWayWindow = new MemberWayWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
+                    MemberWayWindow memWayWindow = new MemberWayWindow(getMoves_names_comboBox.Text/*, getMoves_rooms_comboBox.Text*/);
                     memWayWindow.Show();
 
                     break;
                 case "Пребывание сотрудника в зонах за текущий месяц":
 
-                    RoomStatWindow roomStatWindow = new RoomStatWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
+                    RoomStatWindow roomStatWindow = new RoomStatWindow(getMoves_names_comboBox.Text/*, getMoves_rooms_comboBox.Text*/);
                     roomStatWindow.Show();
 
                     break;
                 case "Переработка":
 
-                    OvertimeWindow overtimeWindow = new OvertimeWindow(getMoves_names_comboBox.Text, getMoves_rooms_comboBox.Text);
+                    OvertimeWindow overtimeWindow = new OvertimeWindow(getMoves_names_comboBox.Text/*, getMoves_rooms_comboBox.Text*/);
                     overtimeWindow.Show();
 
                     break;
@@ -149,7 +142,7 @@ namespace WindowsFormsApp1
 
         private void getMoves_rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,16 +171,16 @@ namespace WindowsFormsApp1
 
         private void IN_button_Click(object sender, EventArgs e)
         {
-            String update = "UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = " +
+            String update = "UPDATE `st` SET `time_out`CURRENT_TIME() =  WHERE `member_id` = " +
                                 "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "') ORDER BY `id` DESC LIMIT 1; ";
 
             String insert = "INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) VALUES" + "(NULL, ";
-            
+
             //подзапросы для главного запроса. получают id выбранного в окне работника и помещения соответственно
             String memberIdGet = "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "'), ";
             String roomIdGet = "(SELECT id FROM `rooms` WHERE `room` = '" + rooms_comboBox.Text + "'), CURRENT_DATE(), CURRENT_TIME(), NULL)";
 
-            
+
             db.openConnection();
 
             try

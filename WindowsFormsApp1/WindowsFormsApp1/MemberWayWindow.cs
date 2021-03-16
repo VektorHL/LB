@@ -16,14 +16,14 @@ namespace WindowsFormsApp1
         DB db = new DB();
 
         string _memberName;
-        string _room;
+        //string _room;
 
         //DataTable table = new DataTable();
 
-        public MemberWayWindow(string member, string room)
+        public MemberWayWindow(string member/*, string room*/)
         {
             _memberName = member;
-            _room = room;
+            //_room = room;
             
             InitializeComponent();
             LoadDataTaining();

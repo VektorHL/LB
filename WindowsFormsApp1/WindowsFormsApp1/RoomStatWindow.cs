@@ -16,12 +16,12 @@ namespace WindowsFormsApp1
         //DB db = new DB();
 
         string _memberName;
-        string _room;
+        //string _room;
 
-        public RoomStatWindow(string member, string room)
+        public RoomStatWindow(string member/*, string room*/)
         {
             _memberName = member;
-            _room = room;
+            //_room = room;
 
             InitializeComponent();
             LoadDataTaining();
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                                 "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
                                 "AND st.member_id = m.id " +
                                 "AND `time_out` IS NOT NULL " +
-                                "AND WEEK(st.date) = WEEK(CURRENT_DATE())) as secc " +
+                                "AND WEEK(st.date) = WEEK(CURRENT_DATE() -4)) as secc " +
                             "GROUP BY secc.room";
 
             MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);

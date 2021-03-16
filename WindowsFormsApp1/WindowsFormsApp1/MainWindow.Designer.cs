@@ -42,7 +42,6 @@ namespace WindowsFormsApp1
             this.getMoves_tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.getMoves_rooms_comboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.getMoves_names_comboBox = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,7 +70,7 @@ namespace WindowsFormsApp1
             this.MainWindow_tableLayoutPanel.Name = "MainWindow_tableLayoutPanel";
             this.MainWindow_tableLayoutPanel.RowCount = 1;
             this.MainWindow_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindow_tableLayoutPanel.Size = new System.Drawing.Size(700, 46);
+            this.MainWindow_tableLayoutPanel.Size = new System.Drawing.Size(608, 46);
             this.MainWindow_tableLayoutPanel.TabIndex = 1;
             this.MainWindow_tableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainWindow_tableLayoutPanel_Paint);
             // 
@@ -94,7 +93,7 @@ namespace WindowsFormsApp1
             this.getMoves_label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.getMoves_label.Location = new System.Drawing.Point(303, 0);
             this.getMoves_label.Name = "getMoves_label";
-            this.getMoves_label.Size = new System.Drawing.Size(394, 46);
+            this.getMoves_label.Size = new System.Drawing.Size(302, 46);
             this.getMoves_label.TabIndex = 2;
             this.getMoves_label.Text = "СВОДКА О ПЕРЕМЕЩЕНИЯХ";
             this.getMoves_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,7 +179,7 @@ namespace WindowsFormsApp1
             this.getMoves_tableLayoutPanel.ColumnCount = 1;
             this.getMoves_tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.getMoves_tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.getMoves_tableLayoutPanel.Location = new System.Drawing.Point(700, 46);
+            this.getMoves_tableLayoutPanel.Location = new System.Drawing.Point(608, 46);
             this.getMoves_tableLayoutPanel.Name = "getMoves_tableLayoutPanel";
             this.getMoves_tableLayoutPanel.RowCount = 3;
             this.getMoves_tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 109F));
@@ -208,22 +207,12 @@ namespace WindowsFormsApp1
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.getMoves_rooms_comboBox);
+            this.panel1.Controls.Add(this.getMoves_button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 157);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 122);
             this.panel1.TabIndex = 2;
-            // 
-            // getMoves_rooms_comboBox
-            // 
-            this.getMoves_rooms_comboBox.FormattingEnabled = true;
-            this.getMoves_rooms_comboBox.Location = new System.Drawing.Point(19, 15);
-            this.getMoves_rooms_comboBox.Name = "getMoves_rooms_comboBox";
-            this.getMoves_rooms_comboBox.Size = new System.Drawing.Size(164, 21);
-            this.getMoves_rooms_comboBox.TabIndex = 2;
-            this.getMoves_rooms_comboBox.TabStop = false;
-            this.getMoves_rooms_comboBox.SelectedIndexChanged += new System.EventHandler(this.getMoves_rooms_comboBox_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -237,7 +226,7 @@ namespace WindowsFormsApp1
             // getMoves_names_comboBox
             // 
             this.getMoves_names_comboBox.FormattingEnabled = true;
-            this.getMoves_names_comboBox.Location = new System.Drawing.Point(19, 17);
+            this.getMoves_names_comboBox.Location = new System.Drawing.Point(35, 21);
             this.getMoves_names_comboBox.Name = "getMoves_names_comboBox";
             this.getMoves_names_comboBox.Size = new System.Drawing.Size(234, 21);
             this.getMoves_names_comboBox.TabIndex = 1;
@@ -246,7 +235,6 @@ namespace WindowsFormsApp1
             // panel3
             // 
             this.panel3.Controls.Add(this.getMoves_movesType_comboBox);
-            this.panel3.Controls.Add(this.getMoves_button);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
@@ -260,7 +248,7 @@ namespace WindowsFormsApp1
             "Отчёт по сотруднику за текущий месяц",
             "Отчёт по зоне за день",
             "Отчёт по сотрудникам за день"});
-            this.getMoves_movesType_comboBox.Location = new System.Drawing.Point(19, 29);
+            this.getMoves_movesType_comboBox.Location = new System.Drawing.Point(35, 29);
             this.getMoves_movesType_comboBox.Name = "getMoves_movesType_comboBox";
             this.getMoves_movesType_comboBox.Size = new System.Drawing.Size(234, 21);
             this.getMoves_movesType_comboBox.TabIndex = 5;
@@ -270,7 +258,7 @@ namespace WindowsFormsApp1
             // getMoves_button
             // 
             this.getMoves_button.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.getMoves_button.Location = new System.Drawing.Point(295, 29);
+            this.getMoves_button.Location = new System.Drawing.Point(112, 20);
             this.getMoves_button.Name = "getMoves_button";
             this.getMoves_button.Size = new System.Drawing.Size(90, 25);
             this.getMoves_button.TabIndex = 4;
@@ -282,7 +270,7 @@ namespace WindowsFormsApp1
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(700, 261);
+            this.ClientSize = new System.Drawing.Size(608, 261);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.getMoves_tableLayoutPanel);
             this.Controls.Add(this.moves_tableLayoutPanel);
@@ -320,7 +308,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox getMoves_rooms_comboBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox getMoves_names_comboBox;
         private System.Windows.Forms.ComboBox getMoves_movesType_comboBox;
