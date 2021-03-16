@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                             "WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + _memberName + "' " +
                             "AND st.member_id = m.id " +
                             "AND `time_out` IS NOT NULL " +
-                            "#AND st.date = CURRENT_DATE() - 1";
+                            "AND st.date = CURRENT_DATE() - 7";
 
             MySqlCommand cmd = new MySqlCommand(query, mySqlConnection);
 

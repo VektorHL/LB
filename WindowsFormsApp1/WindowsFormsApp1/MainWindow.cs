@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
 
         //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
         String[] movesType_comboBox_Collection = new String[] { "Маршрут сотрудника",
-                                                "Пребывание сотрудника в зонах за текущий месяц",
+                                                "Пребывание сотрудника в зонах",
                                                 "Переработка" };
 
         public MainWindow()
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
                     getMoves_names_comboBox.Text = "Выберите ФИО сотрудника";
 
                     break;
-                case "Пребывание сотрудника в зонах за текущий месяц":
+                case "Пребывание сотрудника в зонах":
 
                     getMoves_names_comboBox.Text = "ФИО сотрудника";
 
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
                     memWayWindow.Show();
 
                     break;
-                case "Пребывание сотрудника в зонах за текущий месяц":
+                case "Пребывание сотрудника в зонах":
 
                     RoomStatWindow roomStatWindow = new RoomStatWindow(getMoves_names_comboBox.Text/*, getMoves_rooms_comboBox.Text*/);
                     roomStatWindow.Show();
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
 
         private void IN_button_Click(object sender, EventArgs e)
         {
-            String update = "UPDATE `st` SET `time_out`CURRENT_TIME() =  WHERE `member_id` = " +
+            String update = "UPDATE `st` SET `time_out` = CURRENT_TIME() WHERE `member_id` = " +
                                 "(SELECT id FROM `members` WHERE CONCAT(`fName`, ' ', `sName`, ' ', `tName`) = '" + names_comboBox.Text + "') ORDER BY `id` DESC LIMIT 1; ";
 
             String insert = "INSERT INTO `st` (`id`, `member_id`, `room_id`, `date`, `time_in`, `time_out`) VALUES" + "(NULL, ";
