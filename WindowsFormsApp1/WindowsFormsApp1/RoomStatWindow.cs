@@ -62,10 +62,6 @@ namespace WindowsFormsApp1
 
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
-                //data[data.Count - 1][2] = reader[2].ToString();
-                //data[data.Count - 1][3] = reader[3].ToString();
-                //data[data.Count - 1][4] = reader[4].ToString();
-                //data[data.Count - 1][5] = reader[5].ToString();
             }
 
             reader.Close();

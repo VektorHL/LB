@@ -95,27 +95,6 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Неверный пароль.");
                 }
-
-                //Npgsql
-                //NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=LittleBrother;User Id=user;Password=123");
-                //conn.Open();
-                //NpgsqlCommand com = new NpgsqlCommand();
-                //com.Connection = conn;
-                //com.CommandType = CommandType.Text;
-                //com.CommandText = "SELECT * FROM \"userPassword\" WHERE password = '@pw" + userPassword + "'";
-                //command.Parameters.Add("@pw", MySqlDbType.Text).Value = userPassword;
-                //NpgsqlDataReader dr = com.ExecuteReader();
-
-                //if (dr.HasRows)
-                //{
-                //    MessageBox.Show("yes");
-                //    //DataTable dt = new DataTable();
-                //    //dt.Load(dr);
-                //}
-                //else
-                //{
-                //    MessageBox.Show("no");
-                //}
             }
         }
 
