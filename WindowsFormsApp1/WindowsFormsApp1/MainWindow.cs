@@ -16,8 +16,8 @@ namespace WindowsFormsApp1
 
         //это я прописал и потом принудительно поиндексно присвоил чисто ради удобства
         String[] movesType_comboBox_Collection = new String[] { "Маршрут сотрудника",
-                                                "Пребывание сотрудника в зонах",
-                                                "Переработка" };
+                                                                "Пребывание сотрудника в зонах",
+                                                                "Переработка" };
 
         public MainWindow()
         {
@@ -111,9 +111,6 @@ namespace WindowsFormsApp1
 
         private void getMoves_button_Click(object sender, EventArgs e)
         {
-            //db.openConnection();
-            //MySqlCommand cmd = new MySqlCommand();
-
             switch (getMoves_movesType_comboBox.Text)
             {
                 case "Маршрут сотрудника":
@@ -135,9 +132,6 @@ namespace WindowsFormsApp1
 
                     break;
             }
-            //cmd.ExecuteReader();
-
-            //db.closeConnection();
         }
 
         private void getMoves_rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,20 +142,6 @@ namespace WindowsFormsApp1
         private void names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //MySqlCommand cmd = new MySqlCommand("SELECT `room` FROM `rooms` WHERE `room` >< '[ВНЕ РАБОЧЕЙ ЗОНЫ]'", db.getConnection());
-
-            //db.openConnection();//открываем соединение, чтобы контачить с БД
-
-            //DbDataReader dataReader = cmd.ExecuteReader();//создаём ридер, чтоб он читал поток строк от команды 
-
-            //rooms_comboBox.Items.Clear();
-
-            //while (dataReader.Read())//читаем построчно, пока строки есть
-            //{
-            //    rooms_comboBox.Items.Add(dataReader["room"].ToString());
-            //}
-
-            //db.closeConnection();//закрываем соединение
         }
 
         private void rooms_comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -196,8 +176,6 @@ namespace WindowsFormsApp1
             finally { }
 
             db.closeConnection();
-
-            //MessageBox.Show("Запись добавлена");
         }
     }
 }
